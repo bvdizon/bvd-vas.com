@@ -57,6 +57,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -83,108 +84,4 @@ ul {
 
 a {
   text-decoration: none;
-}
-
-// UTILITIES
-.container {
-  max-width: 112rem;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 3rem;
-  overflow: hidden;
-
-  @media screen and (min-width: 768px) {
-    padding: 0 5rem;
-  }
-
-  @media screen and (min-width: 1200px) {
-    overflow: visible;
-  }
-}
-
-.btn {
-  display: inline-block;
-  padding: 1rem 2rem;
-  margin: 1rem;
-  letter-spacing: 1px;
-  font-weight: 700;
-  transition: 0.2s;
-
-  &-primary {
-    background: rgb(54, 25, 86);
-    background: linear-gradient(
-      117deg,
-      rgba(54, 25, 86, 1) 0%,
-      rgba(80, 37, 130, 1) 50%,
-      rgba(107, 50, 173, 1) 100%
-    );
-    color: var(--grey-100);
-    border: 2px solid transparent;
-  }
-
-  &-secondary {
-    background: rgb(198, 54, 1);
-    background: linear-gradient(
-      117deg,
-      rgba(198, 54, 1, 1) 0%,
-      rgba(247, 67, 1, 1) 50%,
-      rgba(249, 105, 52, 1) 100%
-    );
-    color: var(--grey-100);
-    border: 2px solid var(--secondary-400);
-
-    &:hover {
-      background: rgb(249, 105, 52);
-      background: linear-gradient(
-        117deg,
-        rgba(249, 105, 52, 1) 0%,
-        rgba(247, 67, 1, 1) 50%,
-        rgba(198, 54, 1, 1) 100%
-      );
-    }
-  }
-
-  &-outline {
-    color: var(--primary-500);
-    border: 2px solid var(--primary-500);
-
-    &:hover {
-      background: rgb(54, 25, 86);
-      background: linear-gradient(
-        117deg,
-        rgba(54, 25, 86, 1) 0%,
-        rgba(80, 37, 130, 1) 50%,
-        rgba(107, 50, 173, 1) 100%
-      );
-      color: var(--grey-100);
-    }
-  }
-}
-
-.text-center {
-  text-align: center;
-}
-
-.mb-xs {
-  margin-bottom: 1.5rem;
-}
-
-.mb-sm {
-  margin-bottom: 3rem;
-}
-
-.section-title {
-  font-size: 3.7rem;
-  font-family: var(--bodyFont);
-  font-weight: 700;
-  text-align: center;
-
-  background-image: linear-gradient(
-    to right,
-    var(--primary-700),
-    var(--primary-900)
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }

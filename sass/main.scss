@@ -1,9 +1,94 @@
 @use './vendor/glightbox';
 
 @use 'globals';
+@use 'utilities';
+
 @use 'navbar';
 @use 'hero';
 @use 'services';
 @use 'about';
 @use 'companies';
 @use 'portfolio';
+
+.portfolio-category {
+  @media screen and (min-width: 1024px) {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: 50% 50%;
+  }
+
+  &--reverse {
+    @media screen and (min-width: 1024px) {
+      .portfolio-category__text {
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+      .portfolio-category__images {
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+    }
+  }
+
+  &__images {
+    position: relative;
+    margin: 0 auto;
+
+    @media screen and (min-width: 600px) {
+      max-width: 60rem;
+      height: 30rem;
+
+      &:hover a:not(:hover) {
+        transform: scale(0.95);
+        filter: blur(1rem);
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      margin: 0;
+    }
+
+    a {
+      display: block;
+      margin: 2rem auto;
+      text-align: center;
+      border-radius: 3px;
+      overflow: hidden;
+
+      img {
+        display: block;
+        object-fit: cover;
+        object-position: top left;
+      }
+
+      @media screen and (min-width: 600px) {
+        box-shadow: var(--shadow-2);
+        position: absolute;
+        z-index: 10;
+        transition: all 0.2s;
+        outline-offset: 1.5rem;
+
+        &:nth-of-type(1) {
+          top: -2rem;
+          left: 2rem;
+        }
+
+        &:nth-of-type(2) {
+          left: 20rem;
+          top: 2rem;
+        }
+
+        &:nth-of-type(3) {
+          left: 12rem;
+          bottom: -3rem;
+        }
+
+        &:hover {
+          outline: 1rem solid var(--secondary-500);
+          transform: scale(1.1) translateY(-5px);
+          z-index: 20;
+          box-shadow: var(--shadow-4);
+        }
+      }
+    }
+  }
+}
