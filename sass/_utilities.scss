@@ -82,6 +82,11 @@
   color: var(--grey-100);
 }
 
+.text-emphasis {
+  border-bottom: 3px solid #f74301;
+  padding-bottom: 3px;
+  font-weight: 700;
+}
 .mb-xs {
   margin-bottom: 1.5rem;
 }
