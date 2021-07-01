@@ -1,5 +1,6 @@
 import GLightbox from './vendor/glightbox';
 import './scripts/menu';
+import './vendor/lazysizes';
 
 const lightboxCrmCms = GLightbox({
   touchNavigation: true,
