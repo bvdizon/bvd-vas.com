@@ -18,3 +18,12 @@ const lightboxWeb = GLightbox({
   touchNavigation: true,
   loop: true,
 });
+
+// INTERSECTION OBSERVER
+let observer = new IntersectionObserver(callback);
+
+// the element that you want to watch
+const element = document.querySelector('iframe');
+
+// register the element with the observe method
+observer.observe(element);
