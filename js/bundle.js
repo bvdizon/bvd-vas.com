@@ -23,7 +23,7 @@ const lightboxWeb = GLightbox({
 let observer = new IntersectionObserver(callback);
 
 // the element that you want to watch
-const element = document.querySelector('iframe');
+const element = document.querySelector('iframe#calendly');
 
 // register the element with the observe method
 observer.observe(element);
