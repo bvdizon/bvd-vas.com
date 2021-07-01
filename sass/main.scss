@@ -104,3 +104,16 @@
     rgba(107, 50, 173, 1) 100%
   );
 }
+
+#calendly {
+  height: 105rem;
+  width: 100%;
+  overflow-y: hidden;
+
+  @media screen and (min-width: 768px) {
+    height: 110rem;
+  }
+  @media screen and (min-width: 1100px) {
+    height: 650px;
+  }
+}
